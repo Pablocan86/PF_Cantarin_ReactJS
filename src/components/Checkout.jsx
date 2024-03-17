@@ -41,7 +41,7 @@ export const Checkout = () => {
             }
           );
 
-          aux.filter((prod) => prod.id != prodBDD.id); //Elimina producto de carrito por no tener stock
+          aux.filter((prod) => prod.id != prodBDD.id);
         }
       });
     });
@@ -60,7 +60,7 @@ export const Checkout = () => {
     )
       .then((orderBuys) => {
         toast.success(
-          `🛒 Muchas gracias por comprar con nosotros, us ID de compra es: ${
+          `🛒 Muchas gracias por comprar con nosotros, su ID de compra es: ${
             orderBuys.id
           } por un total de $ ${totalPrice()}. En breves no contactaremos para coordinar el medio de pago y la entrega.`,
           {
@@ -73,6 +73,9 @@ export const Checkout = () => {
             progress: undefined,
             theme: "dark",
           }
+        );
+        window.open(
+          `https://api.whatsapp.com/send/?phone=541154829958&text=Hola acabo de hacer una compra bajo el número de ID ${orderBuys.id}&type=phone_number&app_absent=0`
         );
         emptyCart();
         e.target.reset();

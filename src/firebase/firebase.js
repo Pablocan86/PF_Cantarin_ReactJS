@@ -10,7 +10,7 @@ import {
 } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCUVjBP12frs6AGeRQerDg0g6vejDgVI9k", //quitar para mandar por privado al profe
+  apiKey: "", //quitar para mandar por privado al profe
   authDomain: "pfcantarin-reactjs.firebaseapp.com",
   projectId: "pfcantarin-reactjs",
   storageBucket: "pfcantarin-reactjs.appspot.com",
