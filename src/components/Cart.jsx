@@ -19,7 +19,7 @@ export const Cart = () => {
         <div className="carritoVacio">
           <ItemList products={cart} plantilla="ItemCart" />
           <div className="grupoCarrito">
-            <p className="resumen">Resumen de la compora: $ {totalPrice()}</p>
+            <p className="resumen">Resumen de la compra: $ {totalPrice()}</p>
             <div className="grupoBtnsCarrito">
               <button className="botonCarrito" onClick={emptyCart}>
                 Vaciar carrito
